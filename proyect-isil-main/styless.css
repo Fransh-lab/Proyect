@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grid-container {
+  display: grid;
+  /* Columna texto vs columna imagen lateral */
+  grid-template-areas:
+    "titulo-seccion" "titulo-seccion"
+    "imggra" "texto_n"
+    "copi" "copi";
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+}
+.grid-container div {
+  border: 1px solid black;
+}
+.titulo-seccion {
+  background-color: lightskyblue;
+  grid-area: titulo-seccion;
+}
+.text {
+  background-color: #e6d3c0;
+  grid-area: texto_n;
+}
+.imggra {
+  background-color: violet;
+  grid-area: imggra;
+}
+.copi {
+  background-color: thistle;
+  grid-area: copi;
+}
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background: grey;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #eee;
+  z-index: 1000;
+}
+/* MENÚ DE NAVEGACIÓN */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Separación entre las opciones del menú */
+  margin-bottom: 30px;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por el menú */
+.main-nav a:hover {
+  color: #cccccc;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #000000; /* Color del icono negro */
+  background-color: blue; /* Fondo circular blanco */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Hace el fondo completamente redondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por las redes sociales */
+.social-icons a:hover {
+  transform: scale(1.1); /* Se agranda ligeramente */
+  background-color: #eeeeee;
+}
+.centro {
+  width: 25%;
+}
+.cen {
+  width: 40%;
+}

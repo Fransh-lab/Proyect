@@ -1,0 +1,329 @@
+/* RESETEO BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif; /* Puedes cambiarla por la tipografía que prefieras */
+    
+}
+
+/* CONTENEDOR HERO CON IMAGEN DE FONDO */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa el 100% de la ventana del navegador */
+    overflow: hidden;
+    
+    /* Reemplaza 'ruta-de-tu-imagen.jpg' por la imagen de las tazas de café */
+   
+    
+    /* Flexbox para centrar todo el contenido vertical y horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* CONTENIDO INTERNO */
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* TÍTULO PRINCIPAL */
+.main-title {
+    font-size: 4rem;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: lowercase; /* Mantiene el estilo visual de la imagen */
+}
+
+/* SLOGAN */
+.slogan {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.slogan em {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Separación entre las opciones del menú */
+    margin-bottom: 30px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por el menú */
+.main-nav a:hover {
+    color: #cccccc; 
+}
+
+/* ICONOS DE REDES SOCIALES */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #000000;          /* Color del icono negro */
+    background-color: #fff;  /* Fondo circular blanco */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;      /* Hace el fondo completamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por las redes sociales */
+.social-icons a:hover {
+    transform: scale(1.1);   /* Se agranda ligeramente */
+    background-color: #eeeeee;
+}
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video cubra todo el espacio sin deformarse */
+    z-index: -1;      /* Lo envía detrás de todo el contenido */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta el 0.5 para más o menos oscuridad */
+    z-index: -1;
+}
+/* Cabecera fija */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: grey;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    z-index: 1000;
+}
+
+/* Menú con iconos */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+
+.main-nav a.active {
+    border-bottom: 2px solid #e74c3c; /* Color de acento */
+    color: white;
+}
+
+/* Contenido */
+.blog-container {
+    max-width: 800px;
+    margin: 40px auto; /* Centra el contenido */
+    padding: 20px;
+}
+
+.post-hero {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Autor (Redondeado) */
+.author-box {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Alinea a la derecha como en la imagen */
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+.author-img {
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Ilustración pequeña */
+.content-illustration {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.inline-img {
+    width: 100px;
+}
+
+/* Footer social */
+.social-footer {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.post-header h2{
+    text-align: center;
+    padding-top: 25px;
+    width: 70%;
+    
+}
+.post-header{
+    display: flex;
+}
+/* Contenedor principal de la galería */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que las imágenes bajen a la siguiente fila */
+    justify-content: center;
+    gap: 25px;             /* Espacio entre imágenes */
+    padding: 40px;
+}
+
+.gallery-item {
+    width: 300px;          /* Ajusta el tamaño de tus fotos */
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;     /* Mantiene la proporción de la foto */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave */
+}
+
+/* EFECTO HOVER (Pseudoclase) */
+.gallery-item img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño un 5% */
+    filter: grayscale(100%); /* Opcional: convierte a blanco y negro al pasar el mouse */
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+.videos-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contenedor que mantiene la proporción 16:9 */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Layout general para la tabla y el formulario */
+.contact-grid {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #fdf5e6, #e6d3c0); /* Degradado lineal */
+    border-radius: 8px;
+}
+
+.info-section, .form-section {
+    flex: 1;
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table td, table th {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Estilo para el formulario */
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mapa */
+.map-container {
+    
+    margin-top: 30px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.ate{
+    border: 1px solid #fff;
+}
+

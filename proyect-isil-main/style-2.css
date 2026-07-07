@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main-title {
+    font-size: 4rem;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+}
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: grey;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    z-index: 1000;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+
+.main-nav a.active {
+    border-bottom: 2px solid #e74c3c; /* Color de acento */
+    color: white;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Separación entre las opciones del menú */
+    margin-bottom: 30px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por el menú */
+.main-nav a:hover {
+    color: #cccccc; 
+}
+.Promo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+
+}.text-des{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    
+    justify-content: center;
+    
+}
+.text-des p{
+    width: 400px;
+}
+.cupon{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.cupon h2{
+    padding-top: 20px;
+    font-size: 2.5em;
+}
+.cupon p{
+    font-size: 1.2em;
+    width: 300px;
+}
+.cupon button{
+    font-size: 1.2em;
+    background-color: cadetblue;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    
+}
+.gif{
+    width: 500px;
+    height: auto;
+    background-color: grey;
+    border: 2px dashed black;
+    border-radius: 20px;
+    animation: flotar 3s ease-in-out infinite;
+}
+main{
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 20px;
+    
+    
+}
+@keyframes flotar {
+    0% {
+        transform: translateY(0px); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.social-footer {
+    text-align: left;
+    margin-top: 50px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #000000;          /* Color del icono negro */
+    background-color: #fff;  /* Fondo circular blanco */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;      /* Hace el fondo completamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por las redes sociales */
+.social-icons a:hover {
+    transform: scale(1.1);   /* Se agranda ligeramente */
+    background-color: #eeeeee;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.text-center{
+    margin-top: 20px;
+}
